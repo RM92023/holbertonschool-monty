@@ -42,3 +42,23 @@ void pall(stack_t *stack)
         stack = stack->next;
     }
 }
+
+
+/**
+ * free_stack - print a list of entries in the table
+ *
+ * @stack: Pointer to the stack structures
+ *
+ * Return: a list of entries in the table
+ */
+void free_stack(stack_t **stack)
+{
+    stack_t *temp;
+
+    while (*stack != NULL)
+    {
+        temp = *stack;
+        *stack = (*stack)->next;
+        free(temp);
+    }
+}
