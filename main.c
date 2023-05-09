@@ -36,7 +36,8 @@ int main(int argc, char **argv)
         if (token != NULL && strcmp(token, "push") == 0)
         {
             token = strtok(NULL, " \n\t");
-            if (token != NULL && isdigit(*token))
+            if (token != NULL && ((isdigit(*token) || (*token == '-' && isdigit(*(token + 1))))
+                          && strspn(token, "-0123456789") == strlen(token)))
                 push(&stack, atoi(token));
             else
             {
@@ -49,6 +50,14 @@ int main(int argc, char **argv)
         }
         else if (token != NULL && strcmp(token, "pall") == 0)
             pall(stack);
+        else
+        {
+            fprintf(stderr, "L%u: unknown instruction %s\n", line_number, token);
+            free(line);
+            fclose(file);
+            free_stack(&stack);
+            exit(EXIT_FAILURE);
+        }
         line_number++;
     }
 
