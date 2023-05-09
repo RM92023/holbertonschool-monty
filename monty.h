@@ -46,7 +46,7 @@ typedef struct instruction_s
 void free_stack(stack_t **stack);
 void push(stack_t **stack, int n);
 void pall(stack_t *stack);
-
+int monty_interpreter(char *filename);
 
 
 
