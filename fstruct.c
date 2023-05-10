@@ -46,6 +46,10 @@ else if (token != NULL && strcmp(token, "pop") == 0)
 pop(stack, line_number);
 else if (token != NULL && strcmp(token, "swap") == 0)
 swap(stack, line_number);
+else if (token != NULL && strcmp(token, "add") == 0)
+add(stack, line_number);
+else if (token != NULL && strcmp(token, "nop") == 0)
+;/* Do nothing */
 else
 {
 fprintf(stderr, "L%u: unknown instruction %s\n", line_number, token);
