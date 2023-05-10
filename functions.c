@@ -42,6 +42,22 @@ void pall(stack_t *stack)
 }
 
 /**
+ * pint - Prints the value at the top of the stack
+ * @stack: The stack to operate on
+ *
+ * Return: The value at the top of the stack
+ */
+void pint(stack_t *stack)
+{
+if (stack == NULL)
+{
+exit(EXIT_FAILURE);
+}
+printf("%d\n", stack->n);
+}
+
+
+/**
  * free_stack - print a list of entries in the table
  *
  * @stack: Pointer to the stack structures

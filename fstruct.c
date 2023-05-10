@@ -40,6 +40,8 @@ return (-1);
 }
 else if (token != NULL && strcmp(token, "pall") == 0)
 pall(*stack);
+else if (token != NULL && strcmp(token, "pint") == 0)
+pint(*stack);
 else
 {
 fprintf(stderr, "L%u: unknown instruction %s\n", line_number, token);

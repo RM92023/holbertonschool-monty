@@ -43,9 +43,14 @@ void (*f)(stack_t **stack, unsigned int line_number);
 
 
 /*Prototypes used in this project*/
-void free_stack(stack_t **stack);
 void push(stack_t **stack, int n);
 void pall(stack_t *stack);
+void pint(stack_t *stack);
+
+/*helps*/
+void free_stack(stack_t **stack);
+
+/*Aditional Functions because betty is not permited more than 40 lines*/
 int monty_interpreter(char *filename);
 int read_lines(FILE *file, stack_t **stack);
 
