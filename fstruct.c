@@ -44,6 +44,8 @@ else if (token != NULL && strcmp(token, "pint") == 0)
 pint(*stack);
 else if (token != NULL && strcmp(token, "pop") == 0)
 pop(stack, line_number);
+else if (token != NULL && strcmp(token, "swap") == 0)
+swap(stack, line_number);
 else
 {
 fprintf(stderr, "L%u: unknown instruction %s\n", line_number, token);
