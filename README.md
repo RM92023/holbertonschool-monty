@@ -63,30 +63,23 @@ Where <file> is the path to the file containing Monty byte code.
 ---
 The project includes the following files:
 
-1. opcodes1.c: contains functions:
-   * _push: pushes an element to the stack.
-   * _pall: prints ALL values on the stack, starting from the top of the stack.
-   * _pint: prints SPECIFICALLY the value at the top of the stack, followed by a newline.
-   * _pop: removes SPECIFICALLY the top element of the stack.
-   * _swap: swaps SPECIFICALLY the top two elements of the stack.
-2. opcodes2.c: contains functions:
-   * _add: adds SPECIFICALLY the top two elements of the stack.
-   * _nop: does nothing.
-3. strtok.c: contains functions:
-   * _ischar: checks if an element of a string is a char.
-   * _strtok: emulates strtok and saves time.
-4. monty.h: contains structures and function initialization.
-5. main.c: contains functions:
-   * free_vglo: frees variables inside vglo.
-   * start_vglo: declares the variables inside global_t struct.
-   * check_input: checks given input and determines if it exists.
+1. functions.c: contains functions:
+   * push: pushes an element to the stack.
+   * pall: prints ALL values on the stack, starting from the top of the stack.
+   * pint: prints SPECIFICALLY the value at the top of the stack, followed by a newline.
+   * pop: removes SPECIFICALLY the top element of the stack.
+   * free_stack: frees memory allocated to all nodes in a linked stack.
+2. more_functions.c: contains functions:
+   * swap: swaps SPECIFICALLY the top two elements of the stack.
+   * add: adds SPECIFICALLY the top two elements of the stack.
+   * nop: does nothing.
+3. monty.h: contains structures and function initialization.
+4. main.c: contains functions:
    * main: monty code interpreter.
-6. getopc.c: contains functions:
-   * getopc: grabs the right opcode.
-7. dlistfuncs.c: contains functions:
-   * add_dnodeint_end: add a node at the end of the doubly link list.
-   * add_dnodeint: adds a node at the beginning of a doubly link list.
-   * free_dlistint: frees the doubly linked list.
+5. fstruct.c: contains functions:
+   * read_lines: reads each line of a file.
+   * interpret_line - interprets a single line of the file.
+   * monty_interpreter - Interpreter for themonty functions.
 
 ### **Authors**
 --- 
