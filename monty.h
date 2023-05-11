@@ -57,6 +57,7 @@ void free_stack(stack_t **stack);
 /*Aditional Functions because betty is not permited more than 40 lines*/
 int monty_interpreter(char *filename);
 int read_lines(FILE *file, stack_t **stack);
+int interpret_line(char *line, stack_t **stack, unsigned int line_number);
 
 
 
